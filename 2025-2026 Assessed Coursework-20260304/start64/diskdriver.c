@@ -50,6 +50,7 @@ static void destroy_voucher(Voucher *v) {
 
 // Worker thread function to process write requests
 static void *write_worker(void *arg) {
+    (void)arg;
     while (1) {
         Request *req = (Request *)blockingReadBB(write_request_queue);
         if (req == NULL) break; // Sentinel for shutdown
@@ -69,6 +70,7 @@ static void *write_worker(void *arg) {
 
 // Worker thread function to process read requests
 static void *read_worker(void *arg) {
+    (void)arg;
     while (1) {
         Request *req = (Request *)blockingReadBB(read_request_queue);
         if (req == NULL) break; // Sentinel for shutdown
