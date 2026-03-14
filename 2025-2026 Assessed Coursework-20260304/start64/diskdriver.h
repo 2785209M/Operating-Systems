@@ -1,6 +1,8 @@
 #ifndef _DISKDRIVER_H_
 #define _DISKDRIVER_H_
 
+#include <pthread.h>
+
 /*
  * Define the interface to the DiskDriver module that mediates access to
  * a disk device
@@ -36,6 +38,7 @@ void init_disk_driver(DiskDevice *dd, void *mem_start, unsigned long mem_length,
  * queueing up the write, 0 if not (in case internal buffers are full)
  * the blocking call will usually return promptly, but there may be
  * a delay while it waits for space in your buffers.
+ * 
  * neither call should delay until the sector is actually written to the disk
  * for a successful nonblocking call and for the blocking call, a voucher is
  * returned that is required to determine the success/failure of the write
@@ -49,6 +52,7 @@ int nonblocking_write_sector(SectorDescriptor *sd, Voucher **v);
  * queueing up the read, 0 if not (in case internal buffers are full)
  * the blocking callwill usually return promptly, but there may be
  * a delay while it waits for space in your buffers.
+ * 
  * neither call should delay until the sector is actually read from the disk
  * for successful nonblocking call and for the blocking call, a voucher is
  * returned that is required to collect the sector after the read completes.

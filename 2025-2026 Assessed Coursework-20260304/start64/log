@@ -1,0 +1,361 @@
+Info: Simulation will run for 30 seconds
+Info: Allocated memory for sector descriptor contents
+Info: Constructing disk device...
+Info: Constructed disk device.
+Info: Initialising disk driver...
+Info: built 30 descriptors (of length 64) from 1920 bytes of memory
+Info: Initialised disk driver.
+Info: Constructing fake applications...
+Info: writer for application 0 is running.
+Info: writer for application 1 is running.
+Info: reader for application 0 is running.
+Info: writer for application 2 is running.
+Info: reader for application 1 is running.
+Info: reader for application 2 is running.
+Info: writer for application 3 is running.
+Info: reader for application 3 is running.
+Info: writer for application 4 is running.
+Info: reader for application 4 is running.
+Info: writer for application 5 is running.
+Info: reader for application 5 is running.
+Info: writer for application 6 is running.
+Info: reader for application 6 is running.
+Info: writer for application 7 is running.
+Info: reader for application 7 is running.
+Info: writer for application 8 is running.
+Info: reader for application 8 is running.
+Info: writer for application 9 is running.
+Info: reader for application 9 is running.
+Info: Constructed fake applications.
+Info: writer for application 10 is running.
+Info: reader for application 10 is running.
+Info: application 0 has acquired a sector descriptor.
+Info: application 0 is queueing write to sector 2059
+Info: application 2 has acquired a sector descriptor.
+Info: application 2 is queueing read of sector 1312 
+Info: application 4 has acquired a sector descriptor.
+Info: application 4 is queueing write to sector 1919
+BUG: Two or more parallel calls to write a sector
+Info: application 4 has queued write to sector 1919 (blocking)
+Info: application 5 has acquired a sector descriptor.
+Info: application 5 is queueing write to sector 3248
+BUG: Two or more parallel calls to write a sector
+Info: application 5 has queued write to sector 3248 (blocking)
+Info: application 9 has acquired a sector descriptor.
+Info: application 9 is queueing write to sector 136
+BUG: Two or more parallel calls to write a sector
+Info: application 9 has queued write to sector 136 (blocking)
+[Device> sector 1312 successfully read by process 2
+Info: application 2 has queued read of sector 1312 (nonblocking)
+[Device> sector 2059 successfully written by process 0
+Info: application 0 has queued write to sector 2059 (blocking)
+Info: application 4 has acquired a sector descriptor.
+Info: application 4 is queueing read of sector 592 
+Info: application 4 (writer) write to sector 1919 was unsuccessful
+Info: application 5 has acquired a sector descriptor.
+Info: application 5 is queueing read of sector 1471 
+BUG: Two or more parallel calls to read a sector
+Info: application 5 has queued read of sector 1471 (nonblocking)
+Info: application 5 (writer) write to sector 3248 was unsuccessful
+Info: application 8 has acquired a sector descriptor.
+Info: application 8 is queueing write to sector 1494
+Info: application 8 has acquired a sector descriptor.
+Info: application 8 is queueing read of sector 1807 
+BUG: Two or more parallel calls to read a sector
+Info: application 8 has queued read of sector 1807 (blocking)
+Info: application 10 has acquired a sector descriptor.
+Info: application 10 is queueing write to sector 852
+BUG: Two or more parallel calls to write a sector
+Info: application 10 has queued write to sector 852 (nonblocking)
+Info: application 10 has acquired a sector descriptor.
+Info: application 10 is queueing read of sector 3085 
+BUG: Two or more parallel calls to read a sector
+Info: application 10 has queued read of sector 3085 (blocking)
+Info: application 0 (writer) write to sector 2059 was successful
+[Device> sector 592 successfully read by process 4
+Info: application 4 has queued read of sector 592 (blocking)
+[Device> sector 1494 successfully written by process 8
+Info: application 8 has queued write to sector 1494 (blocking)
+Info: application 0 has acquired a sector descriptor.
+Info: application 0 is queueing read of sector 3342 
+Info: application 1 has acquired a sector descriptor.
+Info: application 1 is queueing write to sector 1211
+Info: application 1 has acquired a sector descriptor.
+Info: application 1 is queueing read of sector 1853 
+BUG: Two or more parallel calls to read a sector
+Info: application 1 has queued read of sector 1853 (nonblocking)
+Info: application 2 has acquired a sector descriptor.
+Info: application 2 is queueing write to sector 1113
+BUG: Two or more parallel calls to write a sector
+Info: application 2 has queued write to sector 1113 (blocking)
+Info: application 3 has acquired a sector descriptor.
+Info: application 3 is queueing write to sector 2444
+BUG: Two or more parallel calls to write a sector
+Info: application 3 has queued write to sector 2444 (blocking)
+Info: application 3 has acquired a sector descriptor.
+Info: application 3 is queueing read of sector 1842 
+BUG: Two or more parallel calls to read a sector
+Info: application 3 has queued read of sector 1842 (nonblocking)
+Info: application 6 has acquired a sector descriptor.
+Info: application 6 is queueing write to sector 1435
+BUG: Two or more parallel calls to write a sector
+Info: application 6 has queued write to sector 1435 (nonblocking)
+Info: application 5 (reader) read from sector 1471 was unsuccessful
+Info: application 5 (reader) has released a sector descriptor.
+Info: application 6 has acquired a sector descriptor.
+Info: application 6 is queueing read of sector 512 
+BUG: Two or more parallel calls to read a sector
+Info: application 6 has queued read of sector 512 (blocking)
+Info: application 7 has acquired a sector descriptor.
+Info: application 7 is queueing write to sector 1012
+BUG: Two or more parallel calls to write a sector
+Info: application 7 has queued write to sector 1012 (nonblocking)
+Info: application 7 has acquired a sector descriptor.
+Info: application 7 is queueing read of sector 3935 
+BUG: Two or more parallel calls to read a sector
+Info: application 7 has queued read of sector 3935 (nonblocking)
+Info: application 9 has acquired a sector descriptor.
+Info: application 9 is queueing read of sector 1534 
+BUG: Two or more parallel calls to read a sector
+Info: application 9 has queued read of sector 1534 (nonblocking)
+Info: application 9 (writer) write to sector 136 was unsuccessful
+Info: application 10 (writer) write to sector 852 was unsuccessful
+Info: application 10 (reader) read from sector 3085 was unsuccessful
+Info: application 10 (reader) has released a sector descriptor.
+[Device> sector 3342 successfully read by process 0
+Info: application 0 has queued read of sector 3342 (blocking)
+Info: application 2 (reader) read from sector 1312 was successful
+Info: application 2 (reader) has released a sector descriptor.
+Info: application 0 has acquired a sector descriptor.
+Info: application 0 is queueing write to sector 824
+BUG: Two or more parallel calls to write a sector
+Info: application 0 has queued write to sector 824 (nonblocking)
+[Device> sector 1211 successfully written by process 1
+Info: application 1 has queued write to sector 1211 (blocking)
+Info: application 3 (reader) read from sector 1842 was unsuccessful
+Info: application 3 (reader) has released a sector descriptor.
+Info: application 3 (writer) write to sector 2444 was unsuccessful
+Info: application 4 has acquired a sector descriptor.
+Info: application 4 is queueing write to sector 21
+Info: application 5 has acquired a sector descriptor.
+Info: application 6 (writer) write to sector 1435 was unsuccessful
+Info: application 5 is queueing write to sector 3203
+BUG: Two or more parallel calls to write a sector
+Info: application 5 has queued write to sector 3203 (blocking)
+Info: application 10 has acquired a sector descriptor.
+Info: application 10 is queueing write to sector 3524
+BUG: Two or more parallel calls to write a sector
+Info: application 10 has queued write to sector 3524 (nonblocking)
+Info: application 0 (reader) read from sector 3342 was successful
+Info: application 0 (reader) has released a sector descriptor.
+Info: application 0 (writer) write to sector 824 was unsuccessful
+Info: application 4 (reader) read from sector 592 was successful
+Info: application 4 (reader) has released a sector descriptor.
+[Device> sector 21 successfully written by process 4
+Info: application 4 has queued write to sector 21 (nonblocking)
+Info: application 3 has acquired a sector descriptor.
+Info: application 3 is queueing read of sector 567 
+Info: application 6 (reader) read from sector 512 was unsuccessful
+Info: application 6 (reader) has released a sector descriptor.
+Info: application 7 (writer) write to sector 1012 was unsuccessful
+Info: application 7 (reader) read from sector 3935 was unsuccessful
+Info: application 7 (reader) has released a sector descriptor.
+Info: application 8 (reader) read from sector 1807 was unsuccessful
+Info: application 8 (reader) has released a sector descriptor.
+Info: application 9 has acquired a sector descriptor.
+Info: application 9 is queueing write to sector 1128
+Info: application 10 has acquired a sector descriptor.
+Info: application 10 is queueing read of sector 3284 
+BUG: Two or more parallel calls to read a sector
+Info: application 10 has queued read of sector 3284 (blocking)
+Info: application 1 (writer) write to sector 1211 was successful
+[Device> sector 1128 successfully written by process 9
+Info: application 8 (writer) write to sector 1494 was successful
+Info: application 9 has queued write to sector 1128 (blocking)
+[Device> sector 567 successfully read by process 3
+Info: application 3 has queued read of sector 567 (blocking)
+Info: application 1 (reader) read from sector 1853 was unsuccessful
+Info: application 1 (reader) has released a sector descriptor.
+Info: application 2 (writer) write to sector 1113 was unsuccessful
+Info: application 5 has acquired a sector descriptor.
+Info: application 5 is queueing read of sector 1361 
+Info: application 5 (writer) write to sector 3203 was unsuccessful
+Info: application 9 (reader) read from sector 1534 was unsuccessful
+Info: application 9 (reader) has released a sector descriptor.
+Info: application 10 (writer) write to sector 3524 was unsuccessful
+Info: application 0 has acquired a sector descriptor.
+Info: application 0 is queueing read of sector 3787 
+BUG: Two or more parallel calls to read a sector
+Info: application 0 has queued read of sector 3787 (blocking)
+Info: application 2 has acquired a sector descriptor.
+Info: application 2 is queueing read of sector 2378 
+BUG: Two or more parallel calls to read a sector
+Info: application 2 has queued read of sector 2378 (nonblocking)
+Info: application 1 has acquired a sector descriptor.
+Info: application 1 is queueing write to sector 3168
+[Device> sector 3168 successfully written by process 1
+Info: application 1 has queued write to sector 3168 (nonblocking)
+[Device> sector 1361 successfully read by process 5
+Info: application 5 has queued read of sector 1361 (blocking)
+Info: application 3 (reader) read from sector 567 was successful
+Info: application 3 (reader) has released a sector descriptor.
+Info: application 1 has acquired a sector descriptor.
+Info: application 1 is queueing read of sector 1420 
+Info: application 3 has acquired a sector descriptor.
+Info: application 3 is queueing write to sector 2780
+Info: application 6 has acquired a sector descriptor.
+Info: application 6 is queueing write to sector 2690
+BUG: Two or more parallel calls to write a sector
+Info: application 6 has queued write to sector 2690 (blocking)
+Info: application 6 has acquired a sector descriptor.
+Info: application 6 is queueing read of sector 1592 
+BUG: Two or more parallel calls to read a sector
+Info: application 6 has queued read of sector 1592 (blocking)
+Info: application 5 has acquired a sector descriptor.
+Info: application 5 is queueing write to sector 3785
+BUG: Two or more parallel calls to write a sector
+Info: application 5 has queued write to sector 3785 (blocking)
+Info: application 8 has acquired a sector descriptor.
+Info: application 8 is queueing read of sector 208 
+BUG: Two or more parallel calls to read a sector
+Info: application 8 has queued read of sector 208 (blocking)
+Info: application 10 has acquired a sector descriptor.
+Info: application 10 is queueing write to sector 3509
+BUG: Two or more parallel calls to write a sector
+Info: application 10 has queued write to sector 3509 (nonblocking)
+Info: application 10 (reader) read from sector 3284 was unsuccessful
+Info: application 10 (reader) has released a sector descriptor.
+[Device> sector 1420 successfully read by process 1
+Info: application 0 (reader) read from sector 3787 was unsuccessful
+Info: application 0 (reader) has released a sector descriptor.
+Info: application 1 has queued read of sector 1420 (nonblocking)
+Info: application 2 (reader) read from sector 2378 was unsuccessful
+Info: application 2 (reader) has released a sector descriptor.
+Info: application 0 has acquired a sector descriptor.
+Info: application 0 is queueing write to sector 3796
+BUG: Two or more parallel calls to write a sector
+Info: application 0 has queued write to sector 3796 (blocking)
+[Device> sector 2780 successfully written by process 3
+Info: application 3 has queued write to sector 2780 (blocking)
+Info: application 4 has acquired a sector descriptor.
+Info: application 4 is queueing read of sector 3085 
+Info: application 4 (writer) write to sector 21 was successful
+Info: application 8 has acquired a sector descriptor.
+Info: application 8 is queueing write to sector 67
+[Device> sector 67 successfully written by process 8
+Info: application 8 has queued write to sector 67 (nonblocking)
+Info: application 2 has acquired a sector descriptor.
+Info: application 2 is queueing write to sector 2770
+Info: application 6 (writer) write to sector 2690 was unsuccessful
+Info: application 7 has acquired a sector descriptor.
+Info: application 7 is queueing write to sector 508
+BUG: Two or more parallel calls to write a sector
+Info: application 7 has queued write to sector 508 (blocking)
+Info: application 8 (reader) read from sector 208 was unsuccessful
+Info: application 8 (reader) has released a sector descriptor.
+[Device> sector 3085 successfully read by process 4
+Info: application 4 has queued read of sector 3085 (blocking)
+Info: application 7 has acquired a sector descriptor.
+Info: application 7 is queueing read of sector 1767 
+Info: application 1 (reader) read from sector 1420 was successful
+Info: application 1 (reader) has released a sector descriptor.
+[Device> sector 2770 successfully written by process 2
+Info: application 2 has queued write to sector 2770 (nonblocking)
+Info: application 4 has acquired a sector descriptor.
+Info: application 4 is queueing write to sector 2537
+[Device> sector 1767 successfully read by process 7
+Info: application 7 has queued read of sector 1767 (nonblocking)
+Info: application 9 (writer) write to sector 1128 was successful
+[Device> sector 2537 successfully written by process 4
+Info: application 1 (writer) write to sector 3168 was successful
+Info: application 4 has queued write to sector 2537 (blocking)
+Info: application 6 (reader) read from sector 1592 was unsuccessful
+Info: application 6 (reader) has released a sector descriptor.
+Info: application 3 has acquired a sector descriptor.
+Info: application 3 is queueing read of sector 2027 
+Info: application 0 (writer) write to sector 3796 was unsuccessful
+Info: application 3 (writer) write to sector 2780 was successful
+Info: application 2 (writer) write to sector 2770 was successful
+[Device> sector 2027 successfully read by process 3
+Info: application 3 has queued read of sector 2027 (blocking)
+Info: application 4 (writer) write to sector 2537 was successful
+Info: application 8 (writer) write to sector 67 was successful
+Info: application 5 (reader) read from sector 1361 was successful
+Info: application 5 (reader) has released a sector descriptor.
+Info: application 9 has acquired a sector descriptor.
+Info: application 9 is queueing read of sector 1477 
+Info: application 5 (writer) write to sector 3785 was unsuccessful
+Info: application 4 (reader) read from sector 3085 was successful
+Info: application 4 (reader) has released a sector descriptor.
+Info: application 8 has acquired a sector descriptor.
+Info: application 8 is queueing read of sector 1525 
+BUG: Two or more parallel calls to read a sector
+Info: application 8 has queued read of sector 1525 (nonblocking)
+Info: application 10 (writer) write to sector 3509 was unsuccessful
+Info: application 3 (reader) read from sector 2027 was successful
+Info: application 3 (reader) has released a sector descriptor.
+Info: application 10 has acquired a sector descriptor.
+Info: application 10 is queueing read of sector 2020 
+BUG: Two or more parallel calls to read a sector
+Info: application 10 has queued read of sector 2020 (blocking)
+[Device> sector 1477 successfully read by process 9
+Info: application 9 has queued read of sector 1477 (blocking)
+Info: application 7 (writer) write to sector 508 was unsuccessful
+Info: application 7 (reader) read from sector 1767 was successful
+Info: application 7 (reader) has released a sector descriptor.
+Info: application 1 has acquired a sector descriptor.
+Info: application 1 is queueing write to sector 2746
+Info: application 10 (reader) read from sector 2020 was unsuccessful
+Info: application 10 (reader) has released a sector descriptor.
+Info: application 6 has acquired a sector descriptor.
+Info: application 6 is queueing read of sector 1627 
+[Device> sector 1627 successfully read by process 6
+Info: application 6 has queued read of sector 1627 (nonblocking)
+[Device> sector 2746 successfully written by process 1
+Info: application 1 has queued write to sector 2746 (blocking)
+Info: application 8 (reader) read from sector 1525 was unsuccessful
+Info: application 8 (reader) has released a sector descriptor.
+Info: application 6 has acquired a sector descriptor.
+Info: application 6 is queueing write to sector 1873
+[Device> sector 1873 successfully written by process 6
+Info: application 6 has queued write to sector 1873 (blocking)
+Info: application 9 (reader) read from sector 1477 was successful
+Info: application 9 (reader) has released a sector descriptor.
+Info: application 0 has acquired a sector descriptor.
+Info: application 0 is queueing read of sector 2782 
+[Device> sector 2782 successfully read by process 0
+Info: application 0 has queued read of sector 2782 (blocking)
+Info: application 6 (writer) write to sector 1873 was successful
+Info: application 6 (reader) read from sector 1627 was successful
+Info: application 6 (reader) has released a sector descriptor.
+Info: application 2 has acquired a sector descriptor.
+Info: application 2 is queueing read of sector 4092 
+Info: application 0 (reader) read from sector 2782 was successful
+Info: application 0 (reader) has released a sector descriptor.
+Info: application 1 has acquired a sector descriptor.
+Info: application 1 is queueing read of sector 1981 
+BUG: Two or more parallel calls to read a sector
+Info: application 1 has queued read of sector 1981 (nonblocking)
+[Device> sector 4092 successfully read by process 2
+Info: application 2 has queued read of sector 4092 (nonblocking)
+Info: application 1 (reader) read from sector 1981 was unsuccessful
+Info: application 1 (reader) has released a sector descriptor.
+Info: application 9 has acquired a sector descriptor.
+Info: application 9 is queueing write to sector 3437
+Info: application 1 (writer) write to sector 2746 was successful
+[Device> attempt to write sector 3437 by process 9 failed
+Info: application 9 has queued write to sector 3437 (blocking)
+Info: application 9 (writer) write to sector 3437 was unsuccessful
+Info: application 2 (reader) read from sector 4092 was successful
+Info: application 2 (reader) has released a sector descriptor.
+Info: application 5 has acquired a sector descriptor.
+Info: application 5 is queueing read of sector 1372 
+[Device> sector 1372 successfully read by process 5
+Info: application 5 has queued read of sector 1372 (nonblocking)
+Info: application 5 (reader) read from sector 1372 was successful
+Info: application 5 (reader) has released a sector descriptor.
+Info: application 5 has acquired a sector descriptor.
+Info: application 5 is queueing write to sector 669
+[Device> sector 669 successfully written by process 5
+Info: application 5 has queued write to sector 669 (nonblocking)
+Info: application 5 (writer) write to sector 669 was successful
