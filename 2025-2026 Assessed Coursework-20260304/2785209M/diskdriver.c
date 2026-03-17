@@ -1,3 +1,6 @@
+/*AUTHORSIP STATEMENT:
+This is my own work, except for the code that was provided from moodle in the test harness, which we were permitted to use.*/
+
 #include <stdlib.h>
 #include <pthread.h>
 

@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[cm]{fullpage}
+\usepackage{newtxmath}
+\usepackage{newtxtext}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{placeins}
+
+\begin{document}
+\title{2785209M - James Middleton - Assessed Exercise - COMPSCI4011 Operating Systems (H)}
+\date{}
+\maketitle
+
+\section*{Ownership statement}
+\begin{flushleft}
+    This is my own work, except for the code that was provided from moodle in the test harness, which we were permitted to use.
+\end{flushleft}
+
+\section*{Overview}
+\begin{flushleft}
+    From testing with the test harness, I believe the Solution functions properly within the expected guidelines.
+    It utilizes the DiskDevice and FreeSectorDescriptorStore to produce a well optimized solution.
+    From running it side by side with the provided demo, it seems to produce an almost identical output, albeit maybe slightly slower.\\
+    The solution uses a separate write and read queue (Full Duplex) to optimize the efficiency of the code and speed of the process. \\
+    There is no use of malloc, and all memory is allocated using a static voucher pool.\\
+    The BoundedBuffer code from Moodle was used.\\
+    There are shutdown sentinels within the internal worker threads to close the threads during shutdown.
+\end{flushleft}
+
+\section*{Build Instructions}
+\begin{flushleft}
+    To compile, I had to edit the makefile to disable pie.
+    \\
+    \begin{verbatim}
+        cc -no-pie -o my_demo $(OBJECTS) -lpthread
+    \end{verbatim}
+\end{flushleft}
+
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{DiskDriverSequenceDiagram.png}
+    \caption{Design Sketch}
+\end{figure}
+\end{document}
